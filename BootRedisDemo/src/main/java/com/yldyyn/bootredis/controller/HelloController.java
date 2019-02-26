@@ -1,6 +1,8 @@
 package com.yldyyn.bootredis.controller;
 
+import com.yldyyn.bootredis.config.RedisConifg;
 import com.yldyyn.bootredis.service.TestService;
+import com.yldyyn.bootredis.utils.RedisUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -18,7 +20,6 @@ import java.util.Map;
 public class HelloController {
     @Resource
     private TestService testService;
-
 
     @RequestMapping("hello")
     @ResponseBody
