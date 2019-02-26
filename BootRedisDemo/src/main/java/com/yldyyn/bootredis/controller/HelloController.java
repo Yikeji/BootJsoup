@@ -20,6 +20,8 @@ import java.util.Map;
 public class HelloController {
     @Resource
     private TestService testService;
+    @Resource
+    RedisUtils redisUtils;
 
     @RequestMapping("hello")
     @ResponseBody
@@ -30,7 +32,14 @@ public class HelloController {
     @RequestMapping("getAllCourse")
     @ResponseBody
     public List<Map<String,Object>> GetAllCourse(){
+        boolean set = redisUtils.set("name", "xxxx");
+        if (set == true){
+            System.out.println("缓存写入成功");
+        }
+        String key = "name";
+        System.out.println("缓存中获取到的值："+redisUtils.get(key));
         List<Map<String, Object>> allCourse = testService.getAllCourse();
         return allCourse;
+
     }
 }

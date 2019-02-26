@@ -2,6 +2,7 @@ package com.yldyyn.bootredis.config;
 
 import com.yldyyn.bootredis.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,8 +19,8 @@ import redis.clients.jedis.JedisPoolConfig;
  * @Date: 2019-02-26 13:38
  * @Version 1.0
  */
-@Configuration
-@PropertySource("classpath:application.yml")
+
+@EnableAutoConfiguration
 public class RedisConifg {
 
     @Value("${redis.maxIdle}")
