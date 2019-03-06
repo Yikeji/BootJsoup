@@ -36,9 +36,9 @@ public class HelloController {
         if (set == true){
             System.out.println("缓存写入成功");
         }
+        List<Map<String, Object>> allCourse = testService.getAllCourse();
         String key = "name";
         System.out.println("缓存中获取到的值："+redisUtils.get(key));
-        List<Map<String, Object>> allCourse = testService.getAllCourse();
         return allCourse;
 
     }

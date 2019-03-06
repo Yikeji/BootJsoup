@@ -96,7 +96,7 @@ public class RedisConifg {
         RedisProperties.Jedis jedis = new RedisProperties.Jedis();
         JedisConnectionFactory.setPoolConfig(jedisPoolConfig);
         //IP地址
-        JedisConnectionFactory.setHostName("192.168.177.128");
+        JedisConnectionFactory.setHostName("192.168.0.31");
         //端口号
         JedisConnectionFactory.setPort(6379);
         //如果Redis设置有密码
