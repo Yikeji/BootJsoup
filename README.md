@@ -1,0 +1,4 @@
+# BootJsoup
+JAVA代码SringBoot项目
+这里是整合springboot和redis还有jsoup的代码
+爬去jd网页上面的内容，从excel文件读取网页链接，然后进行分析
